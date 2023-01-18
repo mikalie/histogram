@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <h1>Histogram</h1>
+    
+    <figure>
+        <figcaption>Histogram of random or user-entered data.</figcaption>
+        <canvas id="histogram" width="500" height="300">
+            A histogram that defaults to random data or allows entry of user data.
+        </canvas>
+    </figure>
+
+    <div>
+
+    <p>If data does not appear as expected, please adjust bin size and Y-scale.</p>
+
+    <form>
+        <div class="data-entry">
+            <div style="max-width: 330px;">
+                <label for="userEnteredData">Please enter a CSV data series. Only numbers, commas, and spaces are allowed.</label>
+                <textarea id="userEnteredData" height="20px" name="userEnteredData"
+                ></textarea>
+            </div>
+            <div class="bin-size">
+                <label for="chosenBinSize">Bin Size</label>
+                <input id="chosenBinSize" class="user-choice" type="number" placeholder="1">
+            </div>
+            <div class="y-scale"> 
+                <label for="chosenScale">Y-Scale</label>
+                <input id="chosenScale" class="user-choice" type="number" placeholder="5">
+            </div>
+        </div>
+        <div class="submit">
+            <button type="button" id="data-submit">Submit Data</button>
+        </div>
+    </form>
+    </div>
+
+    <script src="histogram.js"></script>
+</body>
+
+</html>
